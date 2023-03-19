@@ -1,22 +1,22 @@
 // Dependencies
 const express = require('express');
 const exphbs = require('express-handlebars');
+const session = require('express-session');
 const path = require('path');
 const hbs = exphbs.create({});
-
-
-// Sets up the Express App
+const .env = require('.env');
+const bcrypt = require('bcrypt');
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-// Set Handlebars as the default template engine.
+const sequelize = require('./app/config/connection');
+const mysql = require('mysql2');
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./controllers/dish-routes'));
+app.use(require('./controllers'));
 
-// Starts the server to begin listening
+
 app.listen(PORT, () => {
     console.log('Server listening on: http://localhost:' + PORT);
 });
