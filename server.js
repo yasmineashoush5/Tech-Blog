@@ -31,12 +31,11 @@ app.use(require('../Tech-Blog/controllers'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers'));
 
-
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log('Server listening on: http://localhost:' + PORT);
     sequelize.sync({ force: false })
-    app.listen(process.env.port || 3001);
+
 
 
 });
-const PORT = process.env.PORT || 3001;
