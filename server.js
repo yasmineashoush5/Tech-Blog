@@ -35,4 +35,7 @@ app.use(require('./controllers'));
 app.listen(PORT, () => {
     console.log('Server listening on: http://localhost:' + PORT);
     sequelize.sync({ force: false })
+    // app.listen(process.env.port || 3000);
+
+
 });
