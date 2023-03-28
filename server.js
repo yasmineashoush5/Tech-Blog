@@ -5,7 +5,7 @@ const session = require('express-session');
 const path = require('path');
 const hbs = exphbs.create({});
 const app = express();
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -35,7 +35,8 @@ app.use(require('./controllers'));
 app.listen(PORT, () => {
     console.log('Server listening on: http://localhost:' + PORT);
     sequelize.sync({ force: false })
-    // app.listen(process.env.port || 3000);
+    app.listen(process.env.port || 3000);
 
 
 });
+const PORT = process.env.PORT || 3000;
