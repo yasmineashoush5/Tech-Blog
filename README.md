@@ -1,1 +1,5 @@
 # Tech-Blog
+All developers, including beginners and even seniors, face a lot of issues while coding either a broken code or errors they can't solve. The only solution to solve the problem is to search the best developer blogs for the answer.
+With new technologies flooding every day, it is hard to keep up with all the updates. Blogs are a valuable resource for keeping up with recent innovations, communicating with fellow developers and getting a feel of what software development is all about. 
+I built a tech blog where you can find the answer for your problem. In this blog , you can search, and also you can also add a comment. There is definitely a lot of blogs to choose from and each and every one of them is somehow different from the other. However, it's important that you can tell the bad from the good and follow only quality blogs providing trustworthy information. My blog is definitely the best and the most trustworthy.
+I used the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
